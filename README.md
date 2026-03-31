@@ -36,7 +36,7 @@ This is NOT an AI agent installer. Most agents are easy to install. This is an *
 ### macOS / Linux
 
 ```
-curl -fsSL https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.sh | bash -s -- --method binary
 ```
 
 ### Windows (PowerShell)
