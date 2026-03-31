@@ -167,9 +167,13 @@ detect_install_method() {
     # behind new tags for up to 30 minutes, causing @latest to install
     # a stale version.
     if command -v brew &>/dev/null; then
+        # Brew taps follow the convention: owner/homebrew-repo
+        # So "julianramirezreyes/julian-ai" becomes "julianramirezreyes/homebrew-julian-ai"
+        brew_tap_url="${GITHUB_OWNER}/homebrew-${GITHUB_REPO}"
+        
         # Check if tap already exists or can be tapped
         if brew tap | grep -q "^${BREW_TAP}$" 2>/dev/null || \
-           git ls-remote "https://github.com/${BREW_TAP}" &>/dev/null; then
+           git ls-remote "https://github.com/${brew_tap_url}" &>/dev/null; then
             INSTALL_METHOD="brew"
             success "Homebrew tap found — will install via brew"
         else
