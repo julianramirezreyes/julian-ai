@@ -31,9 +31,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$GITHUB_OWNER = "Gentleman-Programming"
-$GITHUB_REPO = "gentle-ai"
-$BINARY_NAME = "gentle-ai"
+$GITHUB_OWNER = "julianramirezreyes"
+$GITHUB_REPO = "julian-ai"
+$BINARY_NAME = "julian-ai"
 
 # ============================================================================
 # Logging helpers

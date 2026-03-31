@@ -17,13 +17,13 @@ type InjectionResult struct {
 	Files   []string
 }
 
-// outputStyleOverlayJSON is the settings.json overlay to enable the Gentleman output style.
-var outputStyleOverlayJSON = []byte("{\n  \"outputStyle\": \"Gentleman\"\n}\n")
+// outputStyleOverlayJSON is the settings.json overlay to enable the Julian Ramirez output style.
+var outputStyleOverlayJSON = []byte("{\n  \"outputStyle\": \"Julian Ramirez\"\n}\n")
 
 // openCodeAgentOverlayJSON defines Tab-switchable agents for OpenCode.
-// "gentleman" is the primary agent, "sdd-orchestrator" is available via Tab.
+// "julian-ramirez" is the primary agent, "sdd-orchestrator" is available via Tab.
 // Both reference AGENTS.md via {file:./AGENTS.md} for their system prompt.
-var openCodeAgentOverlayJSON = []byte("{\n  \"agent\": {\n    \"gentleman\": {\n      \"mode\": \"primary\",\n      \"description\": \"Senior Architect mentor - helpful first, challenging when it matters\",\n      \"prompt\": \"{file:./AGENTS.md}\",\n      \"tools\": {\n        \"write\": true,\n        \"edit\": true\n      }\n    },\n    \"sdd-orchestrator\": {\n      \"mode\": \"all\",\n      \"description\": \"Gentleman personality + SDD delegate-only orchestrator\",\n      \"prompt\": \"{file:./AGENTS.md}\",\n      \"tools\": {\n        \"read\": true,\n        \"write\": true,\n        \"edit\": true,\n        \"bash\": true\n      }\n    }\n  }\n}\n")
+var openCodeAgentOverlayJSON = []byte("{\n  \"agent\": {\n    \"julian-ramirez\": {\n      \"mode\": \"primary\",\n      \"description\": \"Senior Architect mentor - helpful first, challenging when it matters\",\n      \"prompt\": \"{file:./AGENTS.md}\",\n      \"tools\": {\n        \"write\": true,\n        \"edit\": true\n      }\n    },\n    \"sdd-orchestrator\": {\n      \"mode\": \"all\",\n      \"description\": \"Julian Ramirez personality + SDD delegate-only orchestrator\",\n      \"prompt\": \"{file:./AGENTS.md}\",\n      \"tools\": {\n        \"read\": true,\n        \"write\": true,\n        \"edit\": true,\n        \"bash\": true\n      }\n    }\n  }\n}\n")
 
 func Inject(homeDir string, adapter agents.Adapter, persona model.PersonaID) (InjectionResult, error) {
 	if !adapter.SupportsSystemPrompt() {
@@ -186,11 +186,11 @@ func Inject(homeDir string, adapter agents.Adapter, persona model.PersonaID) (In
 		}
 	}
 
-	// 3. Gentleman-only: write output style + merge into settings (if agent supports it).
+	// 3. Julian Ramirez-only: write output style + merge into settings (if agent supports it).
 	if persona == model.PersonaGentleman && adapter.SupportsOutputStyles() {
 		outputStyleDir := adapter.OutputStyleDir(homeDir)
 		if outputStyleDir != "" {
-			outputStylePath := outputStyleDir + "/gentleman.md"
+			outputStylePath := outputStyleDir + "/julian-ramirez.md"
 			outputStyleContent := assets.MustRead("claude/output-style-gentleman.md")
 
 			styleResult, err := filemerge.WriteFileAtomic(outputStylePath, []byte(outputStyleContent), 0o644)

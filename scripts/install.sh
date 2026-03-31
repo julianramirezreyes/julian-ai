@@ -2,22 +2,22 @@
 set -euo pipefail
 
 # ============================================================================
-# gentle-ai — Install Script
+# julian-ai — Install Script
 # One command to configure any AI coding agent on any OS.
 #
 # Usage:
-#   curl -sL https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.sh | bash
+#   curl -sL https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.sh | bash
 #
 # Or download and run:
-#   curl -sLO https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.sh
+#   curl -sLO https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.sh
 #   chmod +x install.sh
 #   ./install.sh
 # ============================================================================
 
-GITHUB_OWNER="Gentleman-Programming"
-GITHUB_REPO="gentle-ai"
-BINARY_NAME="gentle-ai"
-BREW_TAP="Gentleman-Programming/homebrew-tap"
+GITHUB_OWNER="julianramirezreyes"
+GITHUB_REPO="julian-ai"
+BINARY_NAME="julian-ai"
+BREW_TAP="julianramirezreyes/julian-ai"
 
 # ============================================================================
 # Color support

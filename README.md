@@ -1,25 +1,14 @@
-<div align="center">
+# Julian Ramirez AI
 
-<img width="3276" height="1280" alt="image" src="https://github.com/user-attachments/assets/3a3e4ae1-b9f4-4ce9-8fd0-3833812beb99" />
+**One command. Any agent. Any OS. The Julian Ramirez AI ecosystem -- configured and ready.**
 
-<h1>AI Gentle Stack</h1>
-
-<p><strong>One command. Any agent. Any OS. The Gentleman AI ecosystem -- configured and ready.</strong></p>
-
-<p>
-<a href="https://github.com/Gentleman-Programming/gentle-ai/releases"><img src="https://img.shields.io/github/v/release/Gentleman-Programming/gentle-ai" alt="Release"></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-<img src="https://img.shields.io/badge/Go-1.24+-00ADD8?logo=go&logoColor=white" alt="Go 1.24+">
-<img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="Platform">
-</p>
-
-</div>
+[![Release](https://img.shields.io/github/v/release/julianramirezreyes/julian-ai)](https://github.com/julianramirezreyes/julian-ai/releases) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) ![Go 1.24+](https://img.shields.io/badge/Go-1.24+-00ADD8?logo=go&logoColor=white) ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)
 
 ---
 
 ## What It Does
 
-This is NOT an AI agent installer. Most agents are easy to install. This is an **ecosystem configurator** -- it takes whatever AI coding agent(s) you use and supercharges them with the Gentleman stack: persistent memory, Spec-Driven Development workflow, curated coding skills, MCP servers, an AI provider switcher, a teaching-oriented persona with security-first permissions, and per-phase model assignment so each SDD step can run on a different model.
+This is NOT an AI agent installer. Most agents are easy to install. This is an **ecosystem configurator** -- it takes whatever AI coding agent(s) you use and supercharges them with the Julian Ramirez AI stack: persistent memory, Spec-Driven Development workflow, curated coding skills, MCP servers, an AI provider switcher, a teaching-oriented persona with security-first permissions, and per-phase model assignment so each SDD step can run on a different model.
 
 **Before**: "I installed Claude Code / OpenCode / Cursor, but it's just a chatbot that writes code."
 
@@ -28,7 +17,7 @@ This is NOT an AI agent installer. Most agents are easy to install. This is an *
 ### 8 Supported Agents
 
 | Agent | Delegation Model | Key Feature |
-|-------|:---:|---|
+| --- | --- | --- |
 | **Claude Code** | Full (Task tool) | Sub-agents, output styles |
 | **OpenCode** | Full (multi-mode overlay) | Per-phase model routing |
 | **Gemini CLI** | Full (experimental) | Custom agents in `~/.gemini/agents/` |
@@ -38,7 +27,7 @@ This is NOT an AI agent installer. Most agents are easy to install. This is an *
 | **Windsurf** | Solo-agent | Plan Mode, Code Mode, native workflows |
 | **Antigravity** | Solo-agent + Mission Control | Built-in Browser/Terminal sub-agents |
 
-> **Note**: This project supersedes [Agent Teams Lite](https://github.com/Gentleman-Programming/agent-teams-lite) (now archived). Everything ATL provided is included here with better installation, automatic updates, and persistent memory.
+> **Note**: This project is based on [Gentleman-Programming/gentle-ai](https://github.com/Gentleman-Programming/gentle-ai) (open source). All features from the original are included with the Julian Ramirez persona.
 
 ---
 
@@ -46,14 +35,14 @@ This is NOT an AI agent installer. Most agents are easy to install. This is an *
 
 ### macOS / Linux
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.sh | bash
+```
+curl -fsSL https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.sh | bash
 ```
 
 ### Windows (PowerShell)
 
-```powershell
-irm https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.ps1 | iex
+```
+irm https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.ps1 | iex
 ```
 
 This downloads the latest release for your platform and launches the interactive TUI. No Go toolchain required.
@@ -63,7 +52,7 @@ This downloads the latest release for your platform and launches the interactive
 Once your agents are configured, open your AI agent in a project and run these two commands to register the project context:
 
 | Command | What it does | When to re-run |
-|---------|-------------|----------------|
+| --- | --- | --- |
 | `/sdd-init` | Detects stack, testing capabilities, activates Strict TDD Mode if available | When your project adds/removes test frameworks, or first time in a new project |
 | `skill-registry` | Scans installed skills and project conventions, builds the registry | After installing/removing skills, or first time in a new project |
 
@@ -73,40 +62,33 @@ These are **not required** for basic usage. The SDD orchestrator runs `/sdd-init
 
 ## Install
 
-### Homebrew (macOS / Linux)
-
-```bash
-brew tap Gentleman-Programming/homebrew-tap
-brew install gentle-ai
-```
-
 ### Go install (any platform with Go 1.24+)
 
-```bash
-go install github.com/gentleman-programming/gentle-ai/cmd/gentle-ai@latest
+```
+go install github.com/julianramirezreyes/julian-ai/cmd/julian-ai@latest
 ```
 
 ### Windows (PowerShell)
 
-```powershell
+```
 # Option 1: PowerShell installer (downloads binary from GitHub Releases)
-irm https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.ps1 | iex
 
 # Option 2: Go install (requires Go 1.24+)
-go install github.com/gentleman-programming/gentle-ai/cmd/gentle-ai@latest
+go install github.com/julianramirezreyes/julian-ai/cmd/julian-ai@latest
 ```
 
 ### From releases
 
-Download the binary for your platform from [GitHub Releases](https://github.com/Gentleman-Programming/gentle-ai/releases).
+Download the binary for your platform from [GitHub Releases](https://github.com/julianramirezreyes/julian-ai/releases).
 
 ---
 
 ## Documentation
 
 | Topic | Description |
-|-------|-------------|
-| [Intended Usage](docs/intended-usage.md) | How gentle-ai is meant to be used — the mental model |
+| --- | --- |
+| [Intended Usage](docs/intended-usage.md) | How julian-ai is meant to be used — the mental model |
 | [Agents](docs/agents.md) | Supported agents, feature matrix, config paths, and per-agent notes |
 | [Components, Skills & Presets](docs/components.md) | All components, GGA behavior, skill catalog, and preset definitions |
 | [Usage](docs/usage.md) | Persona modes, interactive TUI, CLI flags, and dependency management |
@@ -115,6 +97,20 @@ Download the binary for your platform from [GitHub Releases](https://github.com/
 
 ---
 
-<div align="center">
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-</div>
+## Agent Persona
+
+The agent persona is defined in these embedded files (built into the binary):
+
+| Agent | Persona File |
+| --- | --- |
+| Generic (all agents) | `internal/assets/generic/persona-gentleman.md` |
+| Claude Code | `internal/assets/claude/persona-gentleman.md` |
+| OpenCode | `internal/assets/opencode/persona-gentleman.md` |
+| Output Style (Claude) | `internal/assets/claude/output-style-gentleman.md` |
+| Skills Index | `AGENTS.md` |
+
+To modify the Julian Ramirez persona, edit these files and rebuild the binary.
+
+---
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
