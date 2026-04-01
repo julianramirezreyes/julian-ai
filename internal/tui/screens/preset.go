@@ -17,7 +17,7 @@ func PresetOptions() []model.PresetID {
 }
 
 var presetDescriptions = map[model.PresetID]string{
-	model.PresetFullGentleman: "Everything: memory, SDD, skills, docs, persona & security",
+	model.PresetFullGentleman: "Everything: memory, SDD, skills, docs, Julian Ramirez persona & security",
 	model.PresetEcosystemOnly: "Core tools only: memory, SDD, skills & docs (no persona/security)",
 	model.PresetMinimal:       "Just Engram persistent memory",
 	model.PresetCustom:        "Pick individual components yourself",

@@ -24,7 +24,7 @@ const Cursor = "▸ "
 
 // Tagline returns the welcome screen tagline with the given version.
 func Tagline(version string) string {
-	return "Julian Ramirez AI Stack " + version + " — One command. Any agent. Any OS."
+	return "Julian Ramirez AI " + version + " — Architecture First. Clean Code Always."
 }
 
 // Pre-built reusable styles.

@@ -16,7 +16,7 @@ func RenderPersona(selected model.PersonaID, cursor int) string {
 
 	b.WriteString(styles.TitleStyle.Render("Choose your Persona"))
 	b.WriteString("\n\n")
-	b.WriteString(styles.SubtextStyle.Render("Your own Julian Ramirez! teaches before it solves."))
+	b.WriteString(styles.SubtextStyle.Render("Your Julian Ramirez — Architecture First. Clean Code Always."))
 	b.WriteString("\n\n")
 
 	for idx, persona := range PersonaOptions() {
