@@ -125,4 +125,8 @@ To modify the Julian Ramirez persona, edit these files and rebuild the binary.
 
 ---
 
+Otros archivos de interes
+
+<table><tbody><tr><td>File</td><td>Link</td></tr><tr><td>Script de instalacion linux</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.sh</td></tr><tr><td>Script de instalacion windows</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.ps1</td></tr><tr><td>Julian-ai menu</td><td>/home/julian/proyectos/ia/julian-ai/internal/tui/styles/styles.go</td></tr></tbody></table>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
