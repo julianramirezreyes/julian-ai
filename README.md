@@ -96,6 +96,45 @@ Download the binary for your platform from [GitHub Releases](https://github.com/
 
 ---
 
+## Para compilar y hacer release
+
+### En tu máquina Linux
+
+1\. Compilar linux
+
+```
+go build -o julian-ai ./cmd/gentle-ai
+```
+
+Compilar windows
+
+```
+GOOS=windows GOARCH=amd64 go build -o julian-ai.exe ./cmd/gentle-ai
+```
+
+2\. Crear el archivo comprimido
+
+```
+tar -czf julian-ai_1.0.2_linux_amd64.tar.gz julian-ai
+zip julian-ai_1.0.2_windows_amd64.zip julian-ai.exe
+```
+
+3\. Commit y push
+
+4\. Crear la release
+
+\# Opción A: con gh (si lo tenés)
+
+```
+gh release create v1.0.1 --title "v1.0.1" --notes "Updated tagline to Julian Ramirez AI"
+gh release upload v1.0.1 julian-ai_1.0.1_linux_amd64.tar.gz
+gh release upload v1.0.1 julian-ai_1.0.1_windows_amd64.zip
+```
+
+\# Opción B: manualmente desde GitHub UI en el apartado de releases
+
+---
+
 ## Documentation
 
 | Topic | Description |
@@ -127,6 +166,6 @@ To modify the Julian Ramirez persona, edit these files and rebuild the binary.
 
 Otros archivos de interes
 
-<table><tbody><tr><td>File</td><td>Link</td></tr><tr><td>Script de instalacion linux</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.sh</td></tr><tr><td>Script de instalacion windows</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.ps1</td></tr><tr><td>Julian-ai menu</td><td>/home/julian/proyectos/ia/julian-ai/internal/tui/styles/styles.go</td></tr></tbody></table>
+<table><tbody><tr><td>File</td><td>Link</td></tr><tr><td>Script de instalacion linux</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.sh</td></tr><tr><td>Script de instalacion windows</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.ps1</td></tr><tr><td>Julian-ai menu</td><td>/home/julian/proyectos/ia/julian-ai/internal/tui/styles/styles.go</td></tr><tr><td>Julian-ai persona screen</td><td>/home/julian/proyectos/ia/julian-ai/internal/tui/screens/persona.go</td></tr></tbody></table>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
