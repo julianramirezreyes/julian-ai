@@ -57,15 +57,19 @@ function Stop-WithError {
 
 function Show-Banner {
     Write-Host ""
-    Write-Host "   ____            _   _              _    ___ " -ForegroundColor Cyan
-    Write-Host "  / ___| ___ _ __ | |_| | ___        / \  |_ _|" -ForegroundColor Cyan
-    Write-Host " | |  _ / _ \ '_ \| __| |/ _ \_____ / _ \  | | " -ForegroundColor Cyan
-    Write-Host " | |_| |  __/ | | | |_| |  __/_____/ ___ \ | | " -ForegroundColor Cyan
-    Write-Host "  \____|\___|_| |_|\__|_|\___|    /_/   \_\___|" -ForegroundColor Cyan
+    Write-Host "_________          _       _________ _______  _               _______ _________" -ForegroundColor Cyan
+    Write-Host "\__    _/|\     /|( \      \__   __/(  ___  )( (    /|       (  ___  )\__   __/" -ForegroundColor Cyan
+    Write-Host "   )  (  | )   ( || (         ) (   | (   ) ||  \  ( |       | (   ) |   ) (   " -ForegroundColor Cyan
+    Write-Host "   |  |  | |   | || |         | |   | (___) ||   \ | | _____ | (___) |   | |   " -ForegroundColor Cyan
+    Write-Host "   |  |  | |   | || |         | |   |  ___  || (\ \) |(_____)|  ___  |   | |   " -ForegroundColor Cyan
+    Write-Host "   |  |  | |   | || |         | |   | (   ) || | \   |       | (   ) |   | |   " -ForegroundColor Cyan
+    Write-Host "|\_)  )  | (___) || (____/\___) (___| )   ( || )  \  |       | )   ( |___) (___" -ForegroundColor Cyan
+    Write-Host "(____/   (_______)(_______/\_______/|/     \||/    )_)       |/     \|\_______/" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host "  One command to configure any AI coding agent on any OS" -ForegroundColor DarkGray
+    Write-Host "  JulianAI — One command to configure any AI coding agent on any OS" -ForegroundColor DarkGray
     Write-Host ""
 }
+
 
 # ============================================================================
 # Platform detection

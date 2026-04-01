@@ -433,15 +433,19 @@ verify_installation() {
 print_banner() {
     echo ""
     echo -e "${CYAN}${BOLD}"
-    echo "   ____            _   _              _    ___ "
-    echo "  / ___| ___ _ __ | |_| | ___        / \  |_ _|"
-    echo " | |  _ / _ \ '_ \| __| |/ _ \_____ / _ \  | | "
-    echo " | |_| |  __/ | | | |_| |  __/_____/ ___ \ | | "
-    echo "  \____|\___|_| |_|\__|_|\___|    /_/   \_\___|"
+    echo "_________          _       _________ _______  _               _______ _________"
+    echo "\\__    _/|\\     /|( \\      \\__   __/(  ___  )( (    /|       (  ___  )\\__   __/"
+    echo "   )  (  | )   ( || (         ) (   | (   ) ||  \\  ( |       | (   ) |   ) (   "
+    echo "   |  |  | |   | || |         | |   | (___) ||   \\ | | _____ | (___) |   | |   "
+    echo "   |  |  | |   | || |         | |   |  ___  || (\\ \\) |(_____)|  ___  |   | |   "
+    echo "   |  |  | |   | || |         | |   | (   ) || | \\   |       | (   ) |   | |   "
+    echo "|\\_)  )  | (___) || (____/\\___) (___| )   ( || )  \\  |       | )   ( |___) (___"
+    echo "(____/   (_______)(_______/\\_______/|/     \\||/    )_)       |/     \\|\\_______/"
     echo -e "${NC}"
-    echo -e "  ${DIM}One command to configure any AI coding agent on any OS${NC}"
+    echo -e "  ${DIM}JulianAI — One command to configure any AI coding agent on any OS${NC}"
     echo ""
 }
+
 
 print_next_steps() {
     echo ""
