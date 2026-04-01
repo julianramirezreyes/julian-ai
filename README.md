@@ -45,6 +45,18 @@ curl -fsSL https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/s
 irm https://raw.githubusercontent.com/julianramirezreyes/julian-ai/main/scripts/install.ps1 | iex
 ```
 
+### Update path
+
+```
+# Opción temporal (para esta sesión):
+$env:PATH += ";C:\Users\Admin\AppData\Local\gentle-ai\bin"
+```
+
+```
+# O permanentemente:
+[Environment]::SetEnvironmentVariable('PATH', $env:PATH + ';C:\Users\Admin\AppData\Local\gentle-ai\bin', 'User')
+```
+
 This downloads the latest release for your platform and launches the interactive TUI. No Go toolchain required.
 
 ### After install: project-level setup
