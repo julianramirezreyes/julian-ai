@@ -126,9 +126,9 @@ zip julian-ai_1.0.2_windows_amd64.zip julian-ai.exe
 \# Opción A: con gh (si lo tenés)
 
 ```
-gh release create v1.0.1 --title "v1.0.1" --notes "Updated tagline to Julian Ramirez AI"
-gh release upload v1.0.1 julian-ai_1.0.1_linux_amd64.tar.gz
-gh release upload v1.0.1 julian-ai_1.0.1_windows_amd64.zip
+gh release create v1.0.2 --title "v1.0.1" --notes "Updated tagline to Julian Ramirez AI"
+gh release upload v1.0.2 julian-ai_1.0.1_linux_amd64.tar.gz
+gh release upload v1.0.2 julian-ai_1.0.1_windows_amd64.zip
 ```
 
 \# Opción B: manualmente desde GitHub UI en el apartado de releases
@@ -159,6 +159,7 @@ The agent persona is defined in these embedded files (built into the binary):
 | OpenCode | `internal/assets/opencode/persona-gentleman.md` |
 | Output Style (Claude) | `internal/assets/claude/output-style-gentleman.md` |
 | Skills Index | `AGENTS.md` |
+| Crear tu propio agente | internal/components/persona/inject.go |
 
 To modify the Julian Ramirez persona, edit these files and rebuild the binary.
 
@@ -166,6 +167,6 @@ To modify the Julian Ramirez persona, edit these files and rebuild the binary.
 
 Otros archivos de interes
 
-<table><tbody><tr><td>File</td><td>Link</td></tr><tr><td>Script de instalacion linux</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.sh</td></tr><tr><td>Script de instalacion windows</td><td>/home/julian/proyectos/ia/julian-ai/scripts/install.ps1</td></tr><tr><td>Julian-ai menu</td><td>/home/julian/proyectos/ia/julian-ai/internal/tui/styles/styles.go</td></tr><tr><td>Julian-ai persona screen</td><td>/home/julian/proyectos/ia/julian-ai/internal/tui/screens/persona.go</td></tr></tbody></table>
+<table><tbody><tr><td>File</td><td>Link</td></tr><tr><td>Script de instalacion linux</td><td>scripts/install.sh</td></tr><tr><td>Script de instalacion windows</td><td>scripts/install.ps1</td></tr><tr><td>Julian-ai menu</td><td>internal/tui/styles/styles.go</td></tr><tr><td>Julian-ai persona screen</td><td>internal/tui/screens/persona.go</td></tr></tbody></table>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
