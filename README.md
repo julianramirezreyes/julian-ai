@@ -203,12 +203,30 @@ curl -fsSL https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/mai
 
 ### Windows
 
+**Opción Recomendada (Scoop):**
+Si todavía no tenés Scoop, instalalo primero (desde PowerShell):
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+```
+
+Una vez que tengas Scoop, agregá el bucket e instalá:
 ```powershell
 scoop bucket add gentleman https://github.com/Gentleman-Programming/scoop-bucket
 scoop install gentle-ai
 ```
 
-Or via PowerShell script: `irm https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.ps1 | iex`
+**Alternativa (Script directo):**
+```powershell
+irm https://raw.githubusercontent.com/Gentleman-Programming/gentle-ai/main/scripts/install.ps1 | iex
+```
+*(Nota: Confirmá que se guardó en tu `$env:PATH` para luego poder correrlo desde cualquier lado).*
+
+**Para ejecutar:**
+Una vez instalado, simplemente llamá a tu agente desde la consola:
+```powershell
+gentleman-ai
+```
 
 ### After install: project-level setup
 
@@ -240,6 +258,13 @@ go install github.com/gentleman-programming/gentle-ai/cmd/gentle-ai@latest
 
 ### Scoop (Windows)
 
+Si todavía no lo tenés, asegurate de instalar Scoop primero:
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+```
+
+Luego avanzá instalando el agente:
 ```powershell
 scoop bucket add gentleman https://github.com/Gentleman-Programming/scoop-bucket
 scoop install gentle-ai
