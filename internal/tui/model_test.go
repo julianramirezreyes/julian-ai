@@ -7,14 +7,14 @@ import (
 	"testing"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/gentleman-programming/gentle-ai/internal/backup"
-	"github.com/gentleman-programming/gentle-ai/internal/model"
-	"github.com/gentleman-programming/gentle-ai/internal/pipeline"
-	"github.com/gentleman-programming/gentle-ai/internal/planner"
-	"github.com/gentleman-programming/gentle-ai/internal/system"
-	"github.com/gentleman-programming/gentle-ai/internal/tui/screens"
-	"github.com/gentleman-programming/gentle-ai/internal/update"
-	"github.com/gentleman-programming/gentle-ai/internal/update/upgrade"
+	"github.com/julianramirezreyes/julian-ai/internal/backup"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/pipeline"
+	"github.com/julianramirezreyes/julian-ai/internal/planner"
+	"github.com/julianramirezreyes/julian-ai/internal/system"
+	"github.com/julianramirezreyes/julian-ai/internal/tui/screens"
+	"github.com/julianramirezreyes/julian-ai/internal/update"
+	"github.com/julianramirezreyes/julian-ai/internal/update/upgrade"
 )
 
 func TestNavigationWelcomeToDetection(t *testing.T) {

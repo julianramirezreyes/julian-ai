@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gentleman-programming/gentle-ai/internal/catalog"
-	"github.com/gentleman-programming/gentle-ai/internal/model"
-	"github.com/gentleman-programming/gentle-ai/internal/system"
+	"github.com/julianramirezreyes/julian-ai/internal/catalog"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/system"
 )
 
 type InstallInput struct {

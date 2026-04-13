@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gentleman-programming/gentle-ai/internal/cli"
-	"github.com/gentleman-programming/gentle-ai/internal/planner"
-	"github.com/gentleman-programming/gentle-ai/internal/system"
-	"github.com/gentleman-programming/gentle-ai/internal/tui"
+	"github.com/julianramirezreyes/julian-ai/internal/cli"
+	"github.com/julianramirezreyes/julian-ai/internal/planner"
+	"github.com/julianramirezreyes/julian-ai/internal/system"
+	"github.com/julianramirezreyes/julian-ai/internal/tui"
 )
 
 func TestInstallDefaultsMatchTUIModelDefaults(t *testing.T) {
@@ -224,7 +224,7 @@ func TestRunArgsSyncUnknownFlagReturnsError(t *testing.T) {
 	}
 }
 
-// TestRunArgsSyncNoAgentsIsNoOp verifies that `gentle-ai sync` with no
+// TestRunArgsSyncNoAgentsIsNoOp verifies that `julian-ai sync` with no
 // agents flag and an empty home dir (no config dirs) completes as a no-op
 // and does NOT return an error.
 func TestRunArgsSyncNoAgentsIsNoOp(t *testing.T) {

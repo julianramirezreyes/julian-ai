@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gentleman-programming/gentle-ai/internal/model"
-	"github.com/gentleman-programming/gentle-ai/internal/planner"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/planner"
 )
 
 func TestRenderDryRunIncludesPlatformDecision(t *testing.T) {

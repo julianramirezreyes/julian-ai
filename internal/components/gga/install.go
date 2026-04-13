@@ -1,9 +1,9 @@
 package gga
 
 import (
-	"github.com/gentleman-programming/gentle-ai/internal/installcmd"
-	"github.com/gentleman-programming/gentle-ai/internal/model"
-	"github.com/gentleman-programming/gentle-ai/internal/system"
+	"github.com/julianramirezreyes/julian-ai/internal/installcmd"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/system"
 )
 
 func InstallCommand(profile system.PlatformProfile) ([][]string, error) {

@@ -7,15 +7,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gentleman-programming/gentle-ai/internal/agents"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/antigravity"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/claude"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/codex"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/cursor"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/gemini"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/opencode"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/vscode"
-	"github.com/gentleman-programming/gentle-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/agents"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/antigravity"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/claude"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/codex"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/cursor"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/gemini"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/opencode"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/vscode"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
 )
 
 func claudeAdapter() agents.Adapter      { return claude.NewAdapter() }

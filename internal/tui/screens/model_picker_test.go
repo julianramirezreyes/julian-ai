@@ -3,8 +3,8 @@ package screens
 import (
 	"testing"
 
-	"github.com/gentleman-programming/gentle-ai/internal/model"
-	"github.com/gentleman-programming/gentle-ai/internal/opencode"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/opencode"
 )
 
 // makeTestState builds a minimal ModelPickerState with one provider and models

@@ -1,4 +1,4 @@
-module github.com/gentleman-programming/gentle-ai
+module github.com/julianramirezreyes/julian-ai
 
 go 1.24
 

@@ -13,8 +13,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/gentleman-programming/gentle-ai/internal/system"
-	"github.com/gentleman-programming/gentle-ai/internal/update"
+	"github.com/julianramirezreyes/julian-ai/internal/system"
+	"github.com/julianramirezreyes/julian-ai/internal/update"
 )
 
 // httpClient is the HTTP client used for asset downloads.

@@ -8,12 +8,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gentleman-programming/gentle-ai/internal/agents"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/claude"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/codex"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/gemini"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/opencode"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/vscode"
+	"github.com/julianramirezreyes/julian-ai/internal/agents"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/claude"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/codex"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/gemini"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/opencode"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/vscode"
 )
 
 func claudeAdapter() agents.Adapter   { return claude.NewAdapter() }
@@ -91,10 +91,10 @@ func TestInjectClaudeWritesProtocolSection(t *testing.T) {
 	}
 
 	text := string(content)
-	if !strings.Contains(text, "<!-- gentle-ai:engram-protocol -->") {
+	if !strings.Contains(text, "<!-- julian-ai:engram-protocol -->") {
 		t.Fatal("CLAUDE.md missing open marker for engram-protocol")
 	}
-	if !strings.Contains(text, "<!-- /gentle-ai:engram-protocol -->") {
+	if !strings.Contains(text, "<!-- /julian-ai:engram-protocol -->") {
 		t.Fatal("CLAUDE.md missing close marker for engram-protocol")
 	}
 	// Real content check.
@@ -181,7 +181,7 @@ func TestInjectOpenCodeMergesEngramToSettings(t *testing.T) {
 		t.Fatalf("ReadFile(AGENTS.md) error = %v", err)
 	}
 	agentsText := string(agentsContent)
-	if !strings.Contains(agentsText, "<!-- gentle-ai:engram-protocol -->") {
+	if !strings.Contains(agentsText, "<!-- julian-ai:engram-protocol -->") {
 		t.Fatal("AGENTS.md missing engram protocol section marker")
 	}
 	if !strings.Contains(agentsText, "mem_save") {

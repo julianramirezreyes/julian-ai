@@ -8,22 +8,22 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gentleman-programming/gentle-ai/internal/agents"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/antigravity"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/claude"
-	codexagent "github.com/gentleman-programming/gentle-ai/internal/agents/codex"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/cursor"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/gemini"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/opencode"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/vscode"
-	"github.com/gentleman-programming/gentle-ai/internal/agents/windsurf"
-	"github.com/gentleman-programming/gentle-ai/internal/assets"
-	"github.com/gentleman-programming/gentle-ai/internal/components/engram"
-	"github.com/gentleman-programming/gentle-ai/internal/components/mcp"
-	"github.com/gentleman-programming/gentle-ai/internal/components/persona"
-	"github.com/gentleman-programming/gentle-ai/internal/components/sdd"
-	"github.com/gentleman-programming/gentle-ai/internal/components/skills"
-	"github.com/gentleman-programming/gentle-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/agents"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/antigravity"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/claude"
+	codexagent "github.com/julianramirezreyes/julian-ai/internal/agents/codex"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/cursor"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/gemini"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/opencode"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/vscode"
+	"github.com/julianramirezreyes/julian-ai/internal/agents/windsurf"
+	"github.com/julianramirezreyes/julian-ai/internal/assets"
+	"github.com/julianramirezreyes/julian-ai/internal/components/engram"
+	"github.com/julianramirezreyes/julian-ai/internal/components/mcp"
+	"github.com/julianramirezreyes/julian-ai/internal/components/persona"
+	"github.com/julianramirezreyes/julian-ai/internal/components/sdd"
+	"github.com/julianramirezreyes/julian-ai/internal/components/skills"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
 )
 
 var update = flag.Bool("update", false, "update golden files")
@@ -172,8 +172,8 @@ func TestGoldenSDD_Cursor(t *testing.T) {
 		t.Fatalf("sdd.Inject(cursor) changed = false")
 	}
 
-	// Cursor writes SDD orchestrator to ~/.cursor/rules/gentle-ai.mdc.
-	rulesFile := readTestFile(t, filepath.Join(home, ".cursor", "rules", "gentle-ai.mdc"))
+	// Cursor writes SDD orchestrator to ~/.cursor/rules/julian-ai.mdc.
+	rulesFile := readTestFile(t, filepath.Join(home, ".cursor", "rules", "julian-ai.mdc"))
 	assertGolden(t, "sdd-cursor-rules.golden", rulesFile)
 
 	// Golden-check a representative SDD skill file.

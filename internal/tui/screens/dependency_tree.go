@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gentleman-programming/gentle-ai/internal/catalog"
-	"github.com/gentleman-programming/gentle-ai/internal/model"
-	"github.com/gentleman-programming/gentle-ai/internal/planner"
-	"github.com/gentleman-programming/gentle-ai/internal/tui/styles"
+	"github.com/julianramirezreyes/julian-ai/internal/catalog"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/planner"
+	"github.com/julianramirezreyes/julian-ai/internal/tui/styles"
 )
 
 func DependencyTreeOptions() []string {

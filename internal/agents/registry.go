@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/gentleman-programming/gentle-ai/internal/model"
+	"github.com/julianramirezreyes/julian-ai/internal/model"
 )
 
 type Registry struct {
