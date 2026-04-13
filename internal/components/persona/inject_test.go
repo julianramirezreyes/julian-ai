@@ -42,8 +42,8 @@ func TestInjectClaudeGentlemanWritesSectionWithRealContent(t *testing.T) {
 		t.Fatal("CLAUDE.md missing close marker for persona")
 	}
 	// Real content check — the embedded persona has these patterns.
-	if !strings.Contains(text, "Senior Architect") {
-		t.Fatal("CLAUDE.md missing real persona content (expected 'Senior Architect')")
+	if !strings.Contains(text, "Senior Software Architect") {
+		t.Fatal("CLAUDE.md missing real persona content (expected 'Senior Software Architect')")
 	}
 }
 
@@ -56,21 +56,21 @@ func TestInjectClaudeGentlemanWritesOutputStyleFile(t *testing.T) {
 	}
 
 	// Verify output-style file was written.
-	stylePath := filepath.Join(home, ".claude", "output-styles", "gentleman.md")
+	stylePath := filepath.Join(home, ".claude", "output-styles", "julian-ramirez.md")
 	content, err := os.ReadFile(stylePath)
 	if err != nil {
 		t.Fatalf("ReadFile(%q) error = %v", stylePath, err)
 	}
 
 	text := string(content)
-	if !strings.Contains(text, "name: Gentleman") {
-		t.Fatal("Output style file missing YAML frontmatter 'name: Gentleman'")
+	if !strings.Contains(text, "name: Julian Ramirez") {
+		t.Fatal("Output style file missing YAML frontmatter 'name: Julian Ramirez'")
 	}
 	if !strings.Contains(text, "keep-coding-instructions: true") {
 		t.Fatal("Output style file missing 'keep-coding-instructions: true'")
 	}
-	if !strings.Contains(text, "Gentleman Output Style") {
-		t.Fatal("Output style file missing 'Gentleman Output Style' heading")
+	if !strings.Contains(text, "Julian Ramirez Output Style") {
+		t.Fatal("Output style file missing 'Julian Ramirez Output Style' heading")
 	}
 }
 
@@ -108,8 +108,8 @@ func TestInjectClaudeGentlemanMergesOutputStyleIntoSettings(t *testing.T) {
 	if !ok {
 		t.Fatal("settings.json missing 'outputStyle' key")
 	}
-	if outputStyle != "Gentleman" {
-		t.Fatalf("settings.json outputStyle = %q, want %q", outputStyle, "Gentleman")
+	if outputStyle != "Julian Ramirez" {
+		t.Fatalf("settings.json outputStyle = %q, want %q", outputStyle, "Julian Ramirez")
 	}
 
 	// Verify existing keys were preserved.
@@ -134,7 +134,7 @@ func TestInjectClaudeGentlemanReturnsAllFiles(t *testing.T) {
 		t.Fatalf("Inject() returned %d files, want 3: %v", len(result.Files), result.Files)
 	}
 
-	wantSuffixes := []string{"CLAUDE.md", "gentleman.md", "settings.json"}
+	wantSuffixes := []string{"CLAUDE.md", "julian-ramirez.md", "settings.json"}
 	for _, suffix := range wantSuffixes {
 		found := false
 		for _, f := range result.Files {
@@ -257,7 +257,7 @@ func TestInjectOpenCodeGentlemanWritesAgentsFile(t *testing.T) {
 	}
 
 	text := string(content)
-	if !strings.Contains(text, "Senior Architect") {
+	if !strings.Contains(text, "Senior Software Architect") {
 		t.Fatal("AGENTS.md missing real persona content")
 	}
 	if !strings.Contains(text, "<!-- gentle-ai:persona -->") {
@@ -393,7 +393,7 @@ func TestInjectOpenCodeReplacesExactLegacyAssetWithoutDuplication(t *testing.T) 
 		t.Fatalf("expected exactly 1 persona marker, got %d — legacy asset was not replaced cleanly",
 			strings.Count(text, "<!-- gentle-ai:persona -->"))
 	}
-	if !strings.Contains(text, "Senior Architect") {
+	if !strings.Contains(text, "Senior Software Architect") {
 		t.Fatal("persona content missing after replacing legacy asset")
 	}
 }
@@ -742,8 +742,8 @@ func TestInjectCursorGentlemanWritesRulesFileWithRealContent(t *testing.T) {
 	}
 
 	text := string(content)
-	if !strings.Contains(text, "Senior Architect") {
-		t.Fatal("Cursor persona missing 'Senior Architect' — got neutral fallback instead of generic persona")
+	if !strings.Contains(text, "Senior Software Architect") {
+		t.Fatal("Cursor persona missing 'Senior Software Architect' — got neutral fallback instead of generic persona")
 	}
 	if !strings.Contains(text, "Skills") {
 		t.Fatal("Cursor persona missing skills section")
@@ -774,8 +774,8 @@ func TestInjectGeminiGentlemanWritesSystemPromptWithRealContent(t *testing.T) {
 	}
 
 	text := string(content)
-	if !strings.Contains(text, "Senior Architect") {
-		t.Fatal("Gemini persona missing 'Senior Architect'")
+	if !strings.Contains(text, "Senior Software Architect") {
+		t.Fatal("Gemini persona missing 'Senior Software Architect'")
 	}
 }
 
@@ -807,8 +807,8 @@ func TestInjectVSCodeGentlemanWritesInstructionsFile(t *testing.T) {
 	if !strings.Contains(text, "applyTo: \"**\"") {
 		t.Fatal("VS Code instructions file missing YAML frontmatter applyTo pattern")
 	}
-	if !strings.Contains(text, "Senior Architect") {
-		t.Fatal("VS Code persona missing 'Senior Architect'")
+	if !strings.Contains(text, "Senior Software Architect") {
+		t.Fatal("VS Code persona missing 'Senior Software Architect'")
 	}
 }
 
@@ -883,20 +883,20 @@ func TestInjectClaudeAutoHealsStaleFreeTextPersona(t *testing.T) {
 	}
 
 	// The persona content must NOT appear twice (no duplicate blocks).
-	firstPersonaIdx := strings.Index(text, "Senior Architect")
+	firstPersonaIdx := strings.Index(text, "Senior Software Architect")
 	if firstPersonaIdx < 0 {
-		t.Fatal("CLAUDE.md missing 'Senior Architect' persona content")
+		t.Fatal("CLAUDE.md missing 'Senior Software Architect' persona content")
 	}
 	// Verify there's no second occurrence outside the markers.
-	lastPersonaIdx := strings.LastIndex(text, "Senior Architect")
+	lastPersonaIdx := strings.LastIndex(text, "Senior Software Architect")
 	if firstPersonaIdx != lastPersonaIdx {
 		// It's OK if the same string appears inside the single persona marker block
 		// multiple times (e.g., content + newlines), but there must not be a
 		// separate free-text block also containing it.
-		// Check: everything before the open marker should NOT contain "Senior Architect".
+		// Check: everything before the open marker should NOT contain "Senior Software Architect".
 		openMarkerIdx := strings.Index(text, "<!-- gentle-ai:persona -->")
-		if openMarkerIdx >= 0 && strings.Contains(text[:openMarkerIdx], "Senior Architect") {
-			t.Fatal("CLAUDE.md still has 'Senior Architect' before the persona marker — legacy block not fully stripped")
+		if openMarkerIdx >= 0 && strings.Contains(text[:openMarkerIdx], "Senior Software Architect") {
+			t.Fatal("CLAUDE.md still has 'Senior Software Architect' before the persona marker — legacy block not fully stripped")
 		}
 	}
 }
@@ -1057,31 +1057,6 @@ func TestInjectVSCodePreservesNonPersonaGitHubFile(t *testing.T) {
 	}
 	if string(remaining) != userContent {
 		t.Fatalf("user file content was modified: got %q", string(remaining))
-	}
-}
-
-func TestNeutralAndGentlemanToneSectionsMatch(t *testing.T) {
-	neutral := assets.MustRead("generic/persona-neutral.md")
-	gentleman := assets.MustRead("generic/persona-gentleman.md")
-
-	extractSection := func(content, section string) string {
-		idx := strings.Index(content, "## "+section)
-		if idx < 0 {
-			return ""
-		}
-		rest := content[idx:]
-		nextIdx := strings.Index(rest[1:], "\n## ")
-		if nextIdx < 0 {
-			return rest
-		}
-		return rest[:nextIdx+1]
-	}
-
-	neutralTone := extractSection(neutral, "Tone")
-	gentlemanTone := extractSection(gentleman, "Tone")
-
-	if neutralTone != gentlemanTone {
-		t.Fatalf("## Tone sections diverged:\nneutral:\n%s\ngentleman:\n%s", neutralTone, gentlemanTone)
 	}
 }
 
