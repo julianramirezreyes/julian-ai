@@ -845,7 +845,7 @@ func componentPaths(homeDir string, selection model.Selection, adapters []agents
 			}
 			if selection.Persona == model.PersonaGentleman {
 				if adapter.SupportsOutputStyles() {
-					paths = append(paths, adapter.OutputStyleDir(homeDir)+"/gentleman.md")
+					paths = append(paths, adapter.OutputStyleDir(homeDir)+"/julian-ramirez.md")
 					if p := adapter.SettingsPath(homeDir); p != "" {
 						paths = append(paths, p)
 					}

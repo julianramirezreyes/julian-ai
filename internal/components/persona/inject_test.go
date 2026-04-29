@@ -191,7 +191,7 @@ func TestInjectClaudeNeutralDoesNotWriteOutputStyle(t *testing.T) {
 	}
 
 	// Output-style file should NOT exist.
-	stylePath := filepath.Join(home, ".claude", "output-styles", "gentleman.md")
+	stylePath := filepath.Join(home, ".claude", "output-styles", "julian-ramirez.md")
 	if _, err := os.Stat(stylePath); !os.IsNotExist(err) {
 		t.Fatal("Neutral persona should NOT write output-style file")
 	}

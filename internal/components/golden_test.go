@@ -354,7 +354,7 @@ func TestGoldenPersona_Claude_Gentleman(t *testing.T) {
 	claudeMD := readTestFile(t, filepath.Join(home, ".claude", "CLAUDE.md"))
 	assertGolden(t, "persona-claude-gentleman.golden", claudeMD)
 
-	outputStyle := readTestFile(t, filepath.Join(home, ".claude", "output-styles", "gentleman.md"))
+	outputStyle := readTestFile(t, filepath.Join(home, ".claude", "output-styles", "julian-ramirez.md"))
 	assertGolden(t, "persona-claude-gentleman-outputstyle.golden", outputStyle)
 
 	settingsJSON := readTestFile(t, filepath.Join(home, ".claude", "settings.json"))

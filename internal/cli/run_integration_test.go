@@ -1692,7 +1692,7 @@ func TestOpenCodePersonaBeforeSDDPreservesAllSections(t *testing.T) {
 	text := string(content)
 
 	// Persona content must be present
-	if !strings.Contains(text, "Senior Architect") {
+	if !strings.Contains(text, "Senior Software Architect") {
 		t.Error("AGENTS.md missing Gentleman persona content (persona not written)")
 	}
 
