@@ -7,7 +7,7 @@ before:
     - go mod tidy
 
 builds:
-  - main: ./cmd/gentle-ai
+  - main: ./cmd/julian-ai
     binary: julian-ai
     env:
       - CGO_ENABLED=0
